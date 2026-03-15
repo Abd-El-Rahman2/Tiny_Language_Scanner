@@ -40,25 +40,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 20);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(304, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 17);
+            this.label1.Size = new System.Drawing.Size(175, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tiny Code Input";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(99, 51);
+            this.txtCode.Location = new System.Drawing.Point(49, 78);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(209, 223);
+            this.txtCode.Size = new System.Drawing.Size(290, 244);
             this.txtCode.TabIndex = 1;
             this.txtCode.Text = "";
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(342, 275);
+            this.btnScan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScan.Location = new System.Drawing.Point(352, 344);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(66, 23);
+            this.btnScan.Size = new System.Drawing.Size(112, 72);
             this.btnScan.TabIndex = 2;
             this.btnScan.Text = "Scan";
             this.btnScan.UseVisualStyleBackColor = true;
@@ -70,12 +73,13 @@
             this.gridTokens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TokenType,
             this.Lexeme});
-            this.gridTokens.Location = new System.Drawing.Point(456, 51);
+            this.gridTokens.Location = new System.Drawing.Point(477, 78);
             this.gridTokens.Name = "gridTokens";
             this.gridTokens.RowHeadersWidth = 51;
             this.gridTokens.RowTemplate.Height = 24;
-            this.gridTokens.Size = new System.Drawing.Size(283, 212);
+            this.gridTokens.Size = new System.Drawing.Size(295, 244);
             this.gridTokens.TabIndex = 3;
+            this.gridTokens.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTokens_CellContentClick);
             // 
             // TokenType
             // 
@@ -95,7 +99,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 462);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(815, 484);
             this.Controls.Add(this.gridTokens);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.txtCode);

@@ -28,5 +28,10 @@ namespace TinyLanguageScanner
                 gridTokens.Rows.Add(token.Type, token.Lexeme);
             }
         }
+
+        private void gridTokens_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
