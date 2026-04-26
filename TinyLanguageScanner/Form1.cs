@@ -27,6 +27,21 @@ namespace TinyLanguageScanner
             {
                 gridTokens.Rows.Add(token.Type, token.Lexeme);
             }
+
+            if (tokens.Count == 0) return;
+
+            try
+            {
+                MiniLParser parser = new MiniLParser(tokens);
+                parser.ParseProgram();
+                MessageBox.Show("Success: Your code is syntactically correct!",
+                    "Parse Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Syntax Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void gridTokens_CellContentClick(object sender, DataGridViewCellEventArgs e)
